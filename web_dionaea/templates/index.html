@@ -1,0 +1,96 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>生产环境上线系统</title>
+    <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+    <meta name="author" content="Vincent Garreau" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" media="screen" href="../static/css/style.css">
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        form{
+            position: absolute;
+            top: 40%;
+            left: 45%;
+            width: 400px;
+            margin-left: -100px;
+        }
+        form .input-group{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<form method="post" id="login_form" action="/">{% csrf_token %}
+    <div class="panel panel-info">
+        <div class="panel panel-heading">
+            <b style="font-size:20px;">运维上线系统</b>
+        </div>
+        <div class="panel-body">
+            <p id="tip"></p>
+            <ol class="input_error"></ol>
+            <div class="input-group">
+                <span class="input-group-addon">用户名</span>
+                <input id="id_username"maxlength="20" name="username" type="text" class="form-control"/>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon">密码&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input id="id_password" name="password" type="password" class="form-control"/>
+            </div>
+            <input type="submit" class="btn btn-primary" value="登录"/>
+            <input type="hidden" name="next" value="{{ next }}"/>
+        </div>
+    </div>
+</form>
+
+    <!-- count particles -->
+    <!--
+    <div class="count-particles">
+      <span class="js-count-particles">--</span> particles
+    </div>
+    -->
+
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- scripts -->
+    <script src="../static/js/particles.min.js"></script>
+    <script src="../static/js/app.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/jquery.validate.js"></script>
+    <script src="../static/js/jquery.form.js"></script>
+    <script src="../static/js/login.js"></script>
+
+
+    <!-- stats.js -->
+    <!--
+    <script src="../static/js/lib/stats.js"></script>
+    -->
+
+    <script>
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function() {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    </script>
+
+</body>
+</html>
