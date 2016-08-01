@@ -15,6 +15,6 @@ def login(request):
                             filename='Dionaea.log',
                             filemode='aw')
         logging.warning('Username:{0},Password:{1}'.format(username,password))
-        return JsonResponse({"message": u"用户名和密码错误"})
+        return JsonResponse({"messages": u"用户名和密码错误"})
     else:
         return render_to_response("index.html", {}, context_instance=RequestContext(request))

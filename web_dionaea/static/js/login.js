@@ -10,7 +10,7 @@ $(function(){
                 url: '/',
                 type: 'POST',
                 success: function(responseText,statusText){
-                    $('#tip').text(responseText.message);
+                    $('.input_error').css('display', 'block').html('<li>' + responseText.messages + '</li>');
                     $('#login_form').resetForm();
                 }
             })
