@@ -11,4 +11,4 @@
 ![](pic/web_dionaea_01.png)
 
 ####日志
-![](pic/web_dionaea_02.png =800x300)
+![](pic/web_dionaea_02.png)
