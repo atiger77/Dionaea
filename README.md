@@ -8,7 +8,7 @@
 
 
 ####登录界面
-![](pic/web_dionaea_01.png =800x500)
+![](pic/web_dionaea_01.png)
 
 ####日志
 ![](pic/web_dionaea_02.png =800x300)
