@@ -11,6 +11,6 @@
 ![](pic/web_dionaea_01.png)
 
 ####日志
-![](pic/web_dionaea_02.png)
+![](pic/web_dionaea_02.jpg)
 
 ###其他部分还在编写中.
