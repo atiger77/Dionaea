@@ -19,5 +19,5 @@ from atiger77 import views
 
 urlpatterns = [
     url(r'^$', views.login),
-
+    url(r'^admin$',views.login),
 ]
