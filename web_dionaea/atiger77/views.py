@@ -13,7 +13,7 @@ def login(request):
         logging.basicConfig(level=logging.DEBUG,
                             format='%(asctime)s  %(message)s',
                             datefmt='%a, %d %b %Y %H:%M:%S',
-                            filename='Dionaea.log',
+                            filename='/tmp/Dionaea.log',
                             filemode='aw')
         logging.warning('Username:{0} Password:{1} ipaddr:{2}'.format(username,password,ipaddr))
         return JsonResponse({"messages": u"用户名和密码错误"})

@@ -7,10 +7,18 @@
 注：项目前端部分由ID:chanyipiaomiao帮忙完成,github地址：https://github.com/chanyipiaomiao
 
 
+#####部署方式
+’’’
+
+’’’
+
+####启动方式
+
 ####登录界面
 ![](pic/web_dionaea_01.png)
 
 ####日志
 ![](pic/web_dionaea_02.jpg)
 
-###其他部分还在编写中.
+
+####持续更新中
