@@ -3,7 +3,7 @@
 # Author: atiger77
 # Date: 2016/08/11
 # Version: V0.1
-#
+# Desc: A simple statistics script.
 
 # Define
 Log_location="/opt/Dionaea.log"
