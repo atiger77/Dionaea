@@ -17,8 +17,11 @@
 ####登录界面
 ![](pic/web_dionaea_01.png)
 
-####日志
+####日志截图
 ![](pic/web_dionaea_02.png)
+
+####分析脚本执行结果
+![](pic/web_dionaea_03.png)
 
 ####注意事项
 这个dockerfile我没有直接构建push到dockerhub,可以任意修改成自己想要的样子，Check.sh脚本默认是在centos7环境下执行，修改Dionaea_HostIP值可直接兼容其他环境。有问题与我联系WeChat:atiger77
